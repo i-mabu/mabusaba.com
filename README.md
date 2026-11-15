@@ -1,15 +1,31 @@
 # まぶ鯖 公式サイト
 
-Discordコミュニティ「まぶ鯖」の公式サイトです。
+Discordコミュニティ「まぶ鯖」の公式サイトです。Cloudflare Pages で公開します。
+2026-11-15に Cloudflare Pages 向けに全面リニューアルしました（静的サイト、ビルドなし）。
 
-- サイト本体: `index.html`（単一ファイル、画像などのアセットは埋め込み済み）
-- 招待リンク: https://discord.gg/GKkW4wCAVp
-- 公式X: https://x.com/mabu_saba
 - 公式サイト: https://mabusaba.com/
+- Discord招待: https://discord.gg/GKkW4wCAVp （短縮: https://mabusaba.com/discord）
+- 公式X: https://x.com/mabu_saba （短縮: https://mabusaba.com/x）
+- 公式note: https://note.com/mabu_saba （短縮: https://mabusaba.com/note、開設後に有効）
+
+## 構成
+
+```
+index.html            トップページ（全セクション）
+404.html              404ページ
+assets/css/style.css  スタイル（ダーク基調 / ライトは端末設定に追従）
+assets/js/main.js     招待リンクコピー / スクロール表示 / 年表示
+assets/images/        ヒーロー・連携セクションのイラスト（WebP）
+favicon.svg           三日月ファビコン
+_headers              セキュリティヘッダー + アセットのキャッシュ
+_redirects            /discord /x /note の短縮リンク
+robots.txt / sitemap.xml
+wrangler.toml         Pages設定（name = mabusaba-com, 出力はルート）
+```
+
+セクション: ヒーロー / できること / 公式メディア（Discord・X・note）/ mabubot紹介 / 安心の取り組み / 他サーバー連携 / FAQ / 参加
 
 ## 公開（Cloudflare Pages）
-
-2026-11-15に GitHub Pages から Cloudflare Pages へ移行することにしました。
 
 ### 初回セットアップ（Cloudflareダッシュボード）
 1. Cloudflare → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
@@ -28,8 +44,11 @@ Discordコミュニティ「まぶ鯖」の公式サイトです。
 ### 通常の更新
 `main` へ push すると Cloudflare Pages が自動で再デプロイします。
 
-設定ファイル:
-- `wrangler.toml` — Pagesプロジェクト設定（name / 出力ディレクトリ）
-- `_headers` — セキュリティヘッダー
+※ 旧 GitHub Pages 用の `CNAME` ファイルは移行に伴い削除済みです。GitHub Pages 側は Settings → Pages で無効化してください（Cloudflare のカスタムドメインが有効になった後でOK）。
 
-※ 旧 GitHub Pages 用の `CNAME` ファイルは移行に伴い削除しました。GitHub Pages 側は Settings → Pages で無効化してください（Cloudflare のカスタムドメインが有効になった後でOK）。
+## ローカル確認
+
+```bash
+python3 -m http.server 8000
+# http://localhost:8000 を開く
+```
