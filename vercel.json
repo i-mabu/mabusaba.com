@@ -1,0 +1,1 @@
+{"$schema":"https://openapi.vercel.sh/vercel.json","redirects":[{"destination":"https://discord.gg/GKkW4wCAVp","permanent":true,"source":"/discord"},{"destination":"https://x.com/mabu_saba","permanent":true,"source":"/x"},{"destination":"https://note.com/mabu_saba","permanent":true,"source":"/note"}]}
