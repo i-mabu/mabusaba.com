@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mabusaba.com/sitemap.xml
+Sitemap: https://mabusaba-com.pages.dev/sitemap.xml

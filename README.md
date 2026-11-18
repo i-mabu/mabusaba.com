@@ -2,11 +2,12 @@
 
 Discordコミュニティ「まぶ鯖」の公式サイトです。Cloudflare Pages で公開します。
 静的サイト（ビルドなし）で、このリポジトリは2026-11-19に Cloudflare Pages 用に作り直しました。
+独自ドメイン（mabusaba.com）は当面使わず、pages.dev のURLで公開します。
 
-- 公式サイト: https://mabusaba.com/
-- Discord招待: https://discord.gg/GKkW4wCAVp （短縮: https://mabusaba.com/discord）
-- 公式X: https://x.com/mabu_saba （短縮: https://mabusaba.com/x）
-- 公式note: https://note.com/mabu_saba （短縮: https://mabusaba.com/note、開設後に有効）
+- 公式サイト: [mabusaba-com.pages.dev](https://mabusaba-com.pages.dev/)
+- Discord招待: [discord.gg/GKkW4wCAVp](https://discord.gg/GKkW4wCAVp)（短縮: [mabusaba-com.pages.dev/discord](https://mabusaba-com.pages.dev/discord)）
+- 公式X: [@mabu_saba](https://x.com/mabu_saba)（短縮: [mabusaba-com.pages.dev/x](https://mabusaba-com.pages.dev/x)）
+- 公式note: [note.com/mabu_saba](https://note.com/mabu_saba)（短縮: [mabusaba-com.pages.dev/note](https://mabusaba-com.pages.dev/note)、開設後に有効）
 
 ## 構成
 
@@ -37,10 +38,9 @@ wrangler.toml         Pages設定（name = mabusaba-com, 出力はルート）
    - Framework preset: **None**
    - Build command: （空欄）
    - Build output directory: `/`（ルート）
-4. **Save and Deploy** → `https://mabusaba-com.pages.dev` で仮公開される
-5. プロジェクト → **Custom domains** → `mabusaba.com` と `www.mabusaba.com` を追加
-   - ドメインのDNSがCloudflareにある場合は自動で反映されます
-   - DNSが他社にある場合は、ネームサーバーをCloudflareへ移すか、案内に従ってCNAMEを設定してください
+4. **Save and Deploy** → [mabusaba-com.pages.dev](https://mabusaba-com.pages.dev/) で公開される
+
+独自ドメイン（mabusaba.com）は当面使いません。将来使う場合は、プロジェクトの **Custom domains** から追加し、index.html の canonical / OGP と sitemap.xml のURLもドメイン側へ差し替えてください。
 
 ### 通常の更新
 
