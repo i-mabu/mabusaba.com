@@ -28,6 +28,7 @@ wrangler.toml         Pages設定（name = mabusaba-com, 出力はルート）
 ## 公開（Cloudflare Pages）
 
 ### 初回セットアップ（Cloudflareダッシュボード）
+
 1. Cloudflare → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
 2. リポジトリ `i-mabu/mabusaba.com` を選択
 3. ビルド設定:
@@ -42,6 +43,7 @@ wrangler.toml         Pages設定（name = mabusaba-com, 出力はルート）
    - DNSが他社にある場合は、ネームサーバーをCloudflareへ移すか、案内に従ってCNAMEを設定してください
 
 ### 通常の更新
+
 `main` へ push すると Cloudflare Pages が自動で再デプロイします。
 
 ※ 旧 GitHub Pages 用の `CNAME` ファイルは移行に伴い削除済みです。GitHub Pages 側は Settings → Pages で無効化してください（Cloudflare のカスタムドメインが有効になった後でOK）。
